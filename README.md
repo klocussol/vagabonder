@@ -11,3 +11,7 @@ Vagabonder is a social networking site that allows you to connect with fellow us
 
 1. Clone this repository.
 2. Run `ant bootstrap`
+3. Start the server:
+
+    cd web
+    php -S=localhost:8000

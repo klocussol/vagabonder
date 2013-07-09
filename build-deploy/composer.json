@@ -20,6 +20,19 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "phpunit/dbunit": ">=1.2",
+        "phpmd/phpmd": "1.4.*",
+        "squizlabs/php_codesniffer": "dev-master",
+        "behat/behat": "2.4.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver":"*",
+        "behat/mink-selenium2-driver": "*",
+        "mockery/mockery": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "doctrine/data-fixtures" : "dev-master"
+    },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -37,17 +50,15 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "../bin",
+        "vendor-dir": "../vendor"
     },
     "minimum-stability": "dev",
     "extra": {
-        "symfony-app-dir": "app",
-        "symfony-web-dir": "web",
+        "symfony-app-dir": "../app",
+        "symfony-web-dir": "../web",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        },
-        "branch-alias": {
-            "dev-master": "2.4-dev"
+            "file": "../app/config/parameters.yml"
         }
     }
 }
