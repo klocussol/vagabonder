@@ -2,6 +2,9 @@
 
 Vagabonder is a social networking site that allows you to connect with fellow users (travelers or locals) while traveling.
 
+##Build Status
+Develop: [![Build Status](https://travis-ci.org/klocussol/vagabonder.png?branch=develop)](https://travis-ci.org/klocussol/vagabonder)
+
 ##Development Dependencies
 - Git
 - Ant
