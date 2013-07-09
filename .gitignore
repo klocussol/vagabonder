@@ -6,4 +6,4 @@
 /build/
 /vendor/
 /bin/
-/composer.phar
+build-deploy/composer.phar

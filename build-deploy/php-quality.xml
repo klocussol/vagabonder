@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Vagabonder - PHP Coding Quality Tools" basedir="../">
+
+    <target name="phpcs" description="Find all coding standard violations ERRORS using PHP_CodeSniffer">
+        <exec dir="${basedir}" executable="${basedir}/bin/phpcs">
+            <arg value="--standard=PSR2" />
+            <arg value="-n" />
+            <arg value="-p" />
+            <arg path="src/" />
+        </exec>
+    </target>
+
+    <target name="phpcs:ci" description="Find all coding standard violations using PHP_CodeSniffer for use with CI" >
+        <exec dir="${basedir}" executable="bin/phpcs" output="/dev/null" failonerror="true">
+            <arg value="--report=checkstyle" />
+            <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
+            <arg value="--standard=PSR2" />
+            <arg value="-n" />
+            <arg value="-p" />
+            <arg path="src/" />
+        </exec>
+    </target>
+
+    <target name="phploc" description="Measure project size using PHPLOC">
+        <exec dir="${basedir}" executable="phploc">
+            <arg value="--log-csv" />
+            <arg value="build/logs/phploc.csv" />
+            <arg path="src/" />
+        </exec>
+    </target>
+
+    <target name="pdepend" description="Calculate software metrics using PHP_Depend">
+        <exec dir="${basedir}" executable="bin/pdepend">
+            <arg value="--jdepend-xml=build/logs/jdepend.xml" />
+            <arg value="--jdepend-chart=build/logs/dependencies.svg" />
+            <arg value="--overview-pyramid=build/logs/overview-pyramid.svg" />
+            <arg path="src/" />
+        </exec>
+    </target>
+
+    <target name="phpmd" description="Perform project mess detection using PHPMD">
+        <exec dir="${basedir}" executable="bin/phpmd">
+            <arg path="src/" />
+            <arg value="text" />
+            <arg value="build-deploy/phpmd.xml" />
+        </exec>
+    </target>
+
+    <target name="phpmd:ci" description="Perform project mess detection using PHPMD for use with CI">
+        <exec dir="${basedir}" executable="bin/phpmd" failonerror="true">
+            <arg path="src/" />
+            <arg value="xml" />
+            <arg value="build-deploy/phpmd.xml" />
+            <arg value="--reportfile" />
+            <arg value="build/logs/pmd.xml" />
+        </exec>
+    </target>
+
+    <target name="phpcpd" description="Find duplicate code using PHPCPD">
+        <exec executable="phpcpd">
+            <arg value="--names" />
+            <arg value="*.php, *.phtml" />
+            <arg value="--min-lines" />
+            <arg value="3" />
+            <arg value="--log-pmd" />
+            <arg value="${basedir}/build/logs/pmd-cpd.xml" />
+            <arg path="${basedir}/src/" />
+        </exec>
+    </target>
+
+    <target name="lint" description="Runs the php syntax check on entire code base">
+        <apply executable="php" failonerror="true">
+            <arg value="-l" />
+            <fileset dir="${basedir}/src/">
+                <include name="**/*.ph*" />
+                <modified />
+            </fileset>
+        </apply>
+    </target>
+
+    <target name="phpdoc" description="Generate API documentation using phpDocumentor2">
+        <exec executable="phpdoc" failonerror="false">
+            <arg value="run" />
+            <arg value="--directory" />
+            <arg path="${basedir}/src/" />
+            <arg value="--target" />
+            <arg path="${basedir}/build/docs" />
+            <arg value="--title" />
+            <arg value="Blocker" />
+            <arg value="--ignore" />
+            <arg value="tests/*" />
+        </exec>
+    </target>
+
+    <target name="php-quality:ci" depends="prepare">
+        <antcall target="phpcs:ci" />
+    </target>
+
+    <target name="php-quality" depends="prepare" description="Run code quality checks">
+        <antcall target="pdepend" />
+        <antcall target="phpmd" />
+        <antcall target="phpcpd" />
+        <antcall target="phpcs" />
+        <antcall target="phploc" />
+    </target>
+</project>
