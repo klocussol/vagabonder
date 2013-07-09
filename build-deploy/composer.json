@@ -4,7 +4,7 @@
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "": "../src/" }
     },
     "require": {
         "php": ">=5.3.3",
@@ -30,8 +30,9 @@
         "behat/mink-goutte-driver":"*",
         "behat/mink-selenium2-driver": "*",
         "mockery/mockery": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "doctrine/data-fixtures" : "dev-master"
+        "phpunit/php-invoker": "dev-master",
+        "behat/symfony2-extension": "1.0.*@dev"
+
     },
     "scripts": {
         "post-install-cmd": [
