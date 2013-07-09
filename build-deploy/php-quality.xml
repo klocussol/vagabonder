@@ -11,7 +11,7 @@
     </target>
 
     <target name="phpcs:ci" description="Find all coding standard violations using PHP_CodeSniffer for use with CI" >
-        <exec dir="${basedir}" executable="bin/phpcs" output="/dev/null" failonerror="true">
+        <exec dir="${basedir}" executable="${basedir}/bin/phpcs" output="/dev/null" failonerror="true">
             <arg value="--report=checkstyle" />
             <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
             <arg value="--standard=PSR2" />
