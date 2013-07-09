@@ -7,3 +7,4 @@
 /vendor/
 /bin/
 build-deploy/composer.phar
+cache.properties

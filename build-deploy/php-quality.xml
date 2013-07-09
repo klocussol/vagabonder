@@ -31,9 +31,7 @@
 
     <target name="pdepend" description="Calculate software metrics using PHP_Depend">
         <exec dir="${basedir}" executable="bin/pdepend">
-            <arg value="--jdepend-xml=build/logs/jdepend.xml" />
-            <arg value="--jdepend-chart=build/logs/dependencies.svg" />
-            <arg value="--overview-pyramid=build/logs/overview-pyramid.svg" />
+            <arg value="--summary-xml=build/logs/jdepend.xml" />
             <arg path="src/" />
         </exec>
     </target>
@@ -72,6 +70,10 @@
         <apply executable="php" failonerror="true">
             <arg value="-l" />
             <fileset dir="${basedir}/src/">
+                <include name="**/*.ph*" />
+                <modified />
+            </fileset>
+            <fileset dir="${basedir}/tests/">
                 <include name="**/*.ph*" />
                 <modified />
             </fileset>
