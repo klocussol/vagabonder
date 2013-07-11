@@ -1,0 +1,3 @@
+vagabonder_web_homepage:
+    pattern:  /
+    defaults: { _controller: VagabonderWebBundle:Default:index }

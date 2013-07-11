@@ -1,0 +1,4 @@
+vagabonder_web:
+    resource: "@VagabonderWebBundle/Resources/config/routing.yml"
+    prefix:   /
+
