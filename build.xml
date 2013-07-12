@@ -8,11 +8,11 @@
         <echo>Type "ant -p" to see a list of targets</echo>
     </target>
 
-    <target name="build" depends="clean, prepare, php-quality" />
+    <target name="build" depends="clean, prepare, lint, php-quality:ci, phpunit" />
 
-    <target name="build:full" depends="clean, prepare, php-quality, lint, behat, phpdoc" />
+    <target name="build:full" depends="clean, prepare, lint, php-quality:ci, phpunit, behat, phpdoc" />
 
-    <target name="build:ci" depends="clean, prepare, php-quality:ci, lint, phpunit" />
+    <target name="build:ci" depends="clean, prepare, lint, php-quality:ci, phpunit" />
 
     <target name="bootstrap" description="Sets up this project">
         <antcall target="clean:vendor" />

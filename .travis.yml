@@ -1,3 +1,7 @@
+notifications: 
+	email:
+		- kyoko.locussol@gmail.com
+
 language: php
 
 php:

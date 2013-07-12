@@ -4,7 +4,7 @@ default:
     bootstrap:  '%behat.paths.features%/bootstrap'
   extensions:
     Behat\MinkExtension\Extension:
-      base_url: http://biovore.dev
+      base_url: http://localhost:8000
       javascript_session: selenium2
       browser_name: firefox
       goutte: ~
