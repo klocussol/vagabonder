@@ -1,85 +1,130 @@
 {% extends 'VagabonderWebBundle::layout.html.twig' %}
 
+{% block topnav %}
+
+<header class="fixed">
+    <nav class="top-bar">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#">Vagabonder</a>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="right">
+              <li class="divider hide-for-small"></li>
+              <li class="has-dropdown"><a href="#profile">Me</a>
+                <ul class="dropdown">
+                  <li class="divider"></li>
+                  <li><a href="#profile">My profile</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">My settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">My bonds</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">My reviews</a></li>
+                </ul>
+              </li>
+              <li class="divider hide-for-small"></li>
+              <li class="has-dropdown"><a href="#">Survey</a>
+                <ul class="dropdown">
+                  <li class="divider"></li>
+                  <li><a href="#">Personality</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Trips</a></li>
+                  <li class="divider"></li>
+                </ul>
+              </li>
+              <li class="divider hide-for-small"></li>
+              <li class="has-dropdown"><a href="#">Connect</a>
+                <ul class="dropdown">
+                    <li class="divider"></li>
+                    <li><a href="#">With a local</a><li>
+                    <li class="divider"></li>
+                    <li><a href="#find-traveler">With a traveler</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">With both</a></li>
+                </ul>
+              </li>
+              <li class="divider hide-for-small"></li>
+              <li class="has-dropdown"><a href="#">Comment</a>
+                <ul class="dropdown">
+                    <li class="divider"></li>
+                    <li><a href="#">On a vagabonder</a><li>
+                    <li class="divider"></li>
+                    <li><a href="#">On a place</a></li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li class="has-form">
+                <form class="search">
+                  <div class="row collapse">
+                    <div class="small-8 columns">
+                      <input type="text">
+                    </div>
+                    <div class="small-4 columns">
+                      <a href="#" class="button">
+                        <img src="../../../../../../web/bundles/vagabonderweb/images/binocular.png" />
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li class="divider show-for-small"></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+
+{% endblock topnav %}
+
 {% block content %}
 
 <div class="row">
-    <div class="large-12 columns">
-        <h2>Welcome to Foundation</h2>
-        <p>This is version 4.2.3.</p>
-        <hr />
-    </div>
-</div>
+  <div class="large-12 columns">
+    <ul id="welcome-grid" class="welcome-grid clearfix">
+      <li>
+        <h3>Welcome</h3>
+      </li>
+   
+      <li>
+          <h3>to</h3>
+      </li>
+   
+      <li>
+        <h3>Vagabonder!</h3>
+      </li>
 
-<div class="row">
-    <div class="large-8 columns">
-        <h3>The Grid</h3>
+      <li class="grid-span-3">
+        <h3>COLLECT</h3>
+        <p class="hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod bibendum tellus quis porttitor. Pellentesque in interdum nibh. Quisque placerat laoreet aliquet. Donec pellentesque molestie pellentesque. Maecenas hendrerit odio quis erat ullamcorper, eu consequat elit malesuada.</p>
+      </li>
 
-        <!-- Grid Example -->
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="panel">
-                    <p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-                </div>
-            </div>
+      <li class="grid-span-2">
+        <h3>CONNECT</h3>
+        <p class="hide">Fusce lorem eros, pellentesque ac convallis vel, gravida eget arcu. Nulla magna metus, condimentum quis fermentum sit amet, porta eget odio. Proin facilisis ipsum ac metus adipiscing aliquam. Curabitur eleifend nibh eros.</p>
+      </li>
+
+      <li class="grid-span-2">
+        <h3>COORDINATE</h3>
+        <p class="hide">Vivamus volutpat nunc eu sem rhoncus, accumsan malesuada nunc bibendum. Aliquam fringilla facilisis purus, sed bibendum eros porttitor non. Nullam vitae tristique quam.</p>
+      </li>
+
+      <li class="grid-span-3">
+        <h3>COMMENT</h3>
+        <p class="hide">Quisque adipiscing, elit vel aliquet molestie, justo orci ornare elit, sit amet ullamcorper tortor tellus varius augue. Vestibulum nec ante ac nisi vestibulum sollicitudin eu ac tortor. Nulla erat mi, pharetra a metus vitae, cursus elementum felis. Vestibulum malesuada mauris at ante interdum condimentum.</p>
+      </li>
+
+      <li class="grid-span-4">
+        <h3>COMMUNITY</h3>
+        <p class="hide">Suspendisse elementum, tortor ut rhoncus egestas, lectus eros blandit leo, nec tincidunt felis magna a augue. Morbi mollis mattis rutrum. Vivamus vel blandit ipsum, eu fermentum elit. Maecenas urna ante, hendrerit sed lorem quis, pharetra mollis diam. In est lacus, tempor non urna id, pharetra euismod turpis. Morbi vel elementum leo, imperdiet cursus diam.</p>
         </div>
-        <div class="row">
-            <div class="large-6 columns">
-                <div class="panel">
-                    <p>Six columns</p>
-                </div>
-            </div>
-            <div class="large-6 columns">
-                <div class="panel">
-                    <p>Six columns</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-4 columns">
-                <div class="panel">
-                    <p>Four columns</p>
-                </div>
-            </div>
-            <div class="large-4 columns">
-                <div class="panel">
-                    <p>Four columns</p>
-                </div>
-            </div>
-            <div class="large-4 columns">
-                <div class="panel">
-                    <p>Four columns</p>
-                </div>
-            </div>
-        </div>
+      </li>
 
-        <h3>Buttons</h3>
 
-  <div class="row">
-    <div class="large-6 columns">
-      <p><a href="#" class="small button">Small Button</a></p>
-      <p><a href="#" class="button">Medium Button</a></p>
-      <p><a href="#" class="large button">Large Button</a></p>
-    </div>
-    <div class="large-6 columns">
-      <p><a href="#" class="small alert button">Small Alert Button</a></p>
-      <p><a href="#" class="success button">Medium Success Button</a></p>
-      <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
-    </div>
+    </ul>      
   </div>
-    </div>
-
-    <div class="large-4 columns">
-        <h4>Getting Started</h4>
-        <p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-
-        <h4>Other Resources</h4>
-        <p>Once you've exhausted the fun in this document, you should check out:</p>
-        <ul class="disc">
-            <li><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</li>
-            <li><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</li>
-            <li><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</li>
-        </ul>
-    </div>
 </div>
+
 
 {% endblock content %}
