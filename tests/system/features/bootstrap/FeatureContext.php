@@ -22,4 +22,14 @@ class FeatureContext extends MinkContext
     {
         $this->parameters = $parameters;
     }
+
+    /**
+     * @When /^I hover over "([^"]*)"$/
+     */
+    public function iHoverOver($cssSelector)
+    {
+        $element = $this->getSession()->getPage()->find('css', $cssSelector);
+        $element->mouseOver();
+    }
+
 }
