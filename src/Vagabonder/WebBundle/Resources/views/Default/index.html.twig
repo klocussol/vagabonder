@@ -13,64 +13,9 @@
         <section class="top-bar-section">
             <ul class="right">
               <li class="divider hide-for-small"></li>
-              <li class="has-dropdown"><a href="#profile">Me</a>
-                <ul class="dropdown">
-                  <li class="divider"></li>
-                  <li><a href="#profile">My profile</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">My settings</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">My bonds</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">My reviews</a></li>
-                </ul>
-              </li>
+              <li id="login"><a href="/login">Log In</a></li>
               <li class="divider hide-for-small"></li>
-              <li class="has-dropdown"><a href="#">Survey</a>
-                <ul class="dropdown">
-                  <li class="divider"></li>
-                  <li><a href="#">Personality</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Trips</a></li>
-                  <li class="divider"></li>
-                </ul>
-              </li>
-              <li class="divider hide-for-small"></li>
-              <li class="has-dropdown"><a href="#">Connect</a>
-                <ul class="dropdown">
-                    <li class="divider"></li>
-                    <li><a href="#">With a local</a><li>
-                    <li class="divider"></li>
-                    <li><a href="#find-traveler">With a traveler</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">With both</a></li>
-                </ul>
-              </li>
-              <li class="divider hide-for-small"></li>
-              <li class="has-dropdown"><a href="#">Comment</a>
-                <ul class="dropdown">
-                    <li class="divider"></li>
-                    <li><a href="#">On a vagabonder</a><li>
-                    <li class="divider"></li>
-                    <li><a href="#">On a place</a></li>
-                </ul>
-              </li>
-              <li class="divider"></li>
-              <li class="has-form">
-                <form class="search">
-                  <div class="row collapse">
-                    <div class="small-8 columns">
-                      <input type="text">
-                    </div>
-                    <div class="small-4 columns">
-                      <a href="#" class="button">
-                        <img src="../../../../../../web/bundles/vagabonderweb/images/binocular.png" />
-                      </a>
-                    </div>
-                  </div>
-                </form>
-              </li>
-              <li class="divider show-for-small"></li>
+              <li id="signup"><a href="/signup">Sign Up</a></li>
             </ul>
         </section>
     </nav>
@@ -126,5 +71,53 @@
   </div>
 </div>
 
-
 {% endblock content %}
+
+{% block footer %}
+
+<div id="footer-wrap">
+  <footer id="main-footer">
+    <nav id="footer-nav">
+      <ul>
+        <li id="footer-about">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Join the Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li id="footer-getting-started">
+          <h4>Getting Started</h4>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Safety First</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+        </li>
+        <li id="footer-community">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#">Values</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Guidelines</a></li>
+          </ul>
+        </li>
+        <li id="footer-support">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Trademark Policy</a></li>
+          </ul>
+        </li>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+
+
+{% endblock footer %}
