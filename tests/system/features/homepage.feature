@@ -6,7 +6,8 @@ Feature: Fancy fresh landing page
 	@javascript
 	Scenario: I can see the homepage
 		Given I am on homepage
-		Then I should see "Me"
+		Then I should see "Log In"
+		And I should see "Sign Up"
 		And I should see "Collect"
 		And I should see "Connect"
 		And I should see "Coordinate"
