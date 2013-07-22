@@ -2,28 +2,6 @@
 
 {% block title %}Vagabonder - Login{% endblock title %}
 
-{% block topnav %}
-
-<header class="fixed">
-    <nav class="top-bar">
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="#">Vagabonder</a>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-        <section class="top-bar-section">
-            <ul id="login-top-bar" class="right">
-              <li><a href="#">Don't have an account yet?</a></li>
-              <li class="divider hide-for-small"></li>
-              <li id="register"><a href="/register">Register</a></li>
-            </ul>
-        </section>
-    </nav>
-</header>
-
-{% endblock topnav %}
-
 {% block content %}
 {% block fos_user_content %}
 
@@ -64,50 +42,3 @@
 {% endblock fos_user_content %}
 {% endblock content %}
 
-{% block footer %}
-
-<div id="footer-wrap">
-  <footer id="main-footer">
-    <nav id="footer-nav">
-      <ul>
-        <li id="footer-about">
-          <h4>About</h4>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Join the Team</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </li>
-        <li id="footer-getting-started">
-          <h4>Getting Started</h4>
-          <ul>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Safety First</a></li>
-            <li><a href="#">Mobile</a></li>
-          </ul>
-        </li>
-        <li id="footer-community">
-          <h4>Community</h4>
-          <ul>
-            <li><a href="#">Values</a></li>
-            <li><a href="#">Stories</a></li>
-            <li><a href="#">Guidelines</a></li>
-          </ul>
-        </li>
-        <li id="footer-support">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Trademark Policy</a></li>
-          </ul>
-        </li>
-        </li>
-      </ul>
-    </nav>
-  </footer>
-</div>
-
-{% endblock footer %}
