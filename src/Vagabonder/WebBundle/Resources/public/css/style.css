@@ -1,37 +1,13 @@
-/* Font-face
-----------------------------------------------------------*/
-@font-face {
-    font-family: 'Great Vibes';
-    src: url('greatvibes-regular-webfont.eot');
-    src: url('greatvibes-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('greatvibes-regular-webfont.woff') format('woff'),
-         url('greatvibes-regular-webfont.ttf') format('truetype'),
-         url('greatvibes-regular-webfont.svg#great_vibesregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Caviar Dreams';
-    src: url('CaviarDreams-webfont.eot');
-    src: url('CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
-         url('CaviarDreams-webfont.woff') format('woff'),
-         url('CaviarDreams-webfont.ttf') format('truetype'),
-         url('CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 /* General
 ---------------------------------------------------------*/
 
 p, a, label {
-    font-family: "Caviar Dreams"; 
+    font-family: "Poiret One", sans-serif; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Great Vibes";
+    font-family: "Seaweed Script", script;
 }
 
 ul {
@@ -44,27 +20,27 @@ ul {
 ---------------------------------------------------------*/
 
 header nav ul li h1 a {
-    font-family: "Great Vibes";
+    font-family: "Seaweed Script";
     font-size: 150%;
 }
 
 .welcome-grid li:nth-child(1) h3,
 .welcome-grid li:nth-child(2) h3,
 .welcome-grid li:nth-child(3) h3 {
-    font-family: "Great Vibes";
+    font-family: "Seaweed Script";
 }
 
 .top-bar, .top-bar-section ul li.has-dropdown a,
 .top-bar-section ul#login-top-bar li a,
 .top-bar-section ul#login-top-bar li,
-li#signup a, li#login a,
+li#register a, li#login a,
 .top-bar-section ul li.has-form {
 	background-color: #87E8D9;
 }
 
 .top-bar-section ul li.has-dropdown:hover > a,
 .top-bar-section ul li.has-dropdown ul.dropdown li:hover > a,
-li#login:hover > a, li#signup:hover a,
+li#login:hover > a, li#register:hover a,
 .top-bar-section ul li:hover > a {
 	background-color: #74C7BA;
 }
@@ -74,7 +50,7 @@ li#login:hover > a, li#signup:hover a,
 }
 
 a.button img {
-	widht: 75%;
+	width: 75%;
 	height: 75%;
 }
 
@@ -181,7 +157,7 @@ a.button img {
 
 .welcome-grid li h3 {
     color: #fff;
-    font-family: "Caviar Dreams";
+    font-family: "Poiret One";
     font-size: 2.6em;
     font-weight: 100;
 }
@@ -241,7 +217,7 @@ input#_submit {
     width: 100%;
     background-color: #7CEBD4;
     color: #fff;
-    font-family: "Caviar Dreams";
+    font-family: "Poiret One";
     font-size: 250%;
     border: none;
     margin-top: 0.6em;
