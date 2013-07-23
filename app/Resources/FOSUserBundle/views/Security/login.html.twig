@@ -1,0 +1,44 @@
+{% extends 'VagabonderWebBundle::layout.html.twig' %}
+
+{% block title %}Vagabonder - Login{% endblock title %}
+
+{% block content %}
+{% block fos_user_content %}
+
+<div class="row">
+	<div class="large-12 columns">
+		<form action="{{ path("fos_user_security_check") }}" method="post">
+		    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+		    <ul id="login-grid" class="login-grid clearfix">
+		    	<li>
+			    	<label for="username">{{ 'Username or Email:'|trans }}</label>
+			    	<input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+				</li>
+				<li>
+			    	<label for="password">{{ 'Password:'|trans }}</label>
+			    	<input type="password" id="password" name="_password" required="required" />
+			    </li>
+			    <li>
+			    	<input type="radio" id="remember_me" name="_remember_me" value="on" />
+			    	<label for="remember_me">{{ 'Remember Me'|trans }}</label>
+			    </li>
+			    <li id="login-submit">
+			    	<input type="submit" id="_submit" name="_submit" value="{{ 'Submit'|trans }}" />
+				</li>
+			</ul>
+		</form>
+		<div class="forgot">
+			<nav>
+				<ul id="retrieve-info">
+					<li><a href="#">Forgot username?</a></li>
+					<li><a href="#">Forgot password?</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
+{% endblock fos_user_content %}
+{% endblock content %}
+

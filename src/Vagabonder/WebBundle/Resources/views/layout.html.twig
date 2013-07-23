@@ -2,13 +2,32 @@
 {% block body %}
 
 {% block topnav %}
-{% endblock %}
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	{% include 'VagabonderWebBundle:Default:_securenav.html.twig' with {'email': app.user.email } %}
+{% else %}
+	{{ include('VagabonderWebBundle:Default:_publicnav.html.twig') }}
+{% endif %}
+
+{% endblock topnav %}
+
+{% block messages %}
+	{% for type, messages in app.session.flashbag.all() %}
+	            {% for message in messages %}
+	                <div class="flash-{{ type }}">
+	                    {{ message }}
+	                </div>
+	            {% endfor %}
+	{% endfor %}
+{% endblock messages %}
 
 {% block content %}
 {% endblock %}
 
-<footer>
-    <h1>This is the footer</h1>
-</footer>
+{% block footer %}
+
+{{ include('VagabonderWebBundle:Default:_footer.html.twig') }}
+
+{% endblock %}
 
 {% endblock body %}

@@ -1,19 +1,47 @@
+
+/* General
+---------------------------------------------------------*/
+
+p, a, label {
+    font-family: "Poiret One", sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Seaweed Script", script;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
 /* Top Nav Styling
 ---------------------------------------------------------*/
 
-body, header section ul li a {
-	font-family: "Caviar Dreams";
-}
-
 header nav ul li h1 a {
-	font-family: "Coneria Script Demo";
+    font-family: "Seaweed Script";
+    font-size: 150%;
 }
 
-.top-bar, .top-bar-section ul li.has-dropdown a, .top-bar-section ul li.has-form {
+.welcome-grid li:nth-child(1) h3,
+.welcome-grid li:nth-child(2) h3,
+.welcome-grid li:nth-child(3) h3 {
+    font-family: "Seaweed Script";
+}
+
+.top-bar, .top-bar-section ul li.has-dropdown a,
+.top-bar-section ul#login-top-bar li a,
+.top-bar-section ul#login-top-bar li,
+li#register a, li#login a,
+.top-bar-section ul li.has-form {
 	background-color: #87E8D9;
 }
 
-.top-bar-section ul li.has-dropdown:hover > a, .top-bar-section ul li.has-dropdown ul.dropdown li:hover > a {
+.top-bar-section ul li.has-dropdown:hover > a,
+.top-bar-section ul li.has-dropdown ul.dropdown li:hover > a,
+li#login:hover > a, li#register:hover a,
+.top-bar-section ul li:hover > a {
 	background-color: #74C7BA;
 }
 
@@ -22,7 +50,7 @@ header nav ul li h1 a {
 }
 
 a.button img {
-	widht: 75%;
+	width: 75%;
 	height: 75%;
 }
 
@@ -30,17 +58,61 @@ a.button img {
 	margin-top: -2px;
 }
 
-/* Welcome Grid Styling
+/* Footer Styling
+------------------------------------------------------------*/
+
+#footer-wrap {
+    background-color: #87E8D9;
+    height: 13em;
+}
+
+#main-footer {
+    margin: 0 auto;
+    width: 75%;
+}
+
+#footer-nav {
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 0.1em;
+}
+
+#footer-nav ul li h4, 
+#footer-nav ul li ul li a {
+    color: #fff;
+}
+
+#footer-nav ul li ul li a {
+    opacity: 0.7;
+}
+
+#footer-nav ul li ul li:hover a {
+    opacity: 1;
+}
+
+#footer-nav > ul > li {
+    width: 24%;
+    height: 13em;
+    margin: 0.5%;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1.6em;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* Welcome and Login Grid Styling
 ------------------------------------------------------------*/
 
 .welcome-grid {
-    list-style: none;
     text-align: center;
     margin: 0 auto;
     margin-top: 0.5em;
 }
 
-.welcome-grid li {
+.welcome-grid li, #login-grid li, #retrieve-info li, #fos_user_registration_form > div {
     width: 24%;
     height: 13em;
     margin: 0.5%;
@@ -51,7 +123,7 @@ a.button img {
     padding: 1.6em;
     cursor: pointer;
     position: relative;
-    transition: width 0s;
+    transition: width 0.1s;
 }
 
 .welcome-grid li.grid-span-2 {
@@ -74,35 +146,85 @@ a.button img {
 	width: 58%;
 }
 
-/* Description Styling
+/* Welcome Grid Content Description Styling
 -------------------------------------------------------------*/
 
 .welcome-grid li p {
-	text-align: left;
-	margin-left: 1.8em;
-	margin-top: -1em;
+    text-align: left;
+    margin-left: 1.8em;
+    margin-top: -1em;
 }
 
 .welcome-grid li h3 {
-	color: #fff;
-	font-family: "Caviar Dreams";
+    color: #fff;
+    font-family: "Poiret One";
     font-size: 2.6em;
     font-weight: 100;
 }
 
-.welcome-grid li:nth-child(1) h3, .welcome-grid li:nth-child(2) h3, .welcome-grid li:nth-child(3) h3 {
-	font-family: "Coneria Script Demo";
-}
-
 .welcome-grid li:nth-child(1), .welcome-grid li:nth-child(2), .welcome-grid li:nth-child(3) {
-	padding-top: 4em;
+    padding-top: 4em;
 }
 
-.welcome-grid li:nth-child(1) { background: #F7A77C; }
-.welcome-grid li:nth-child(2) { background: #0B486B; }
-.welcome-grid li:nth-child(3) { background: #F05350; }
-.welcome-grid li:nth-child(4) { background: #7CEBD4; }
-.welcome-grid li:nth-child(5) { background: #FCD553; }
-.welcome-grid li:nth-child(6) { background: #5787A5; }
+.welcome-grid li:nth-child(1), #login-grid li:nth-child(1) { background: #F7A77C; }
+.welcome-grid li:nth-child(2), #login-grid li:nth-child(2) { background: #0B486B; }
+.welcome-grid li:nth-child(3), #login-grid li:nth-child(3) { background: #F05350; }
+.welcome-grid li:nth-child(4), #login-grid li:nth-child(4) { background: #7CEBD4; }
+.welcome-grid li:nth-child(5), #retrieve-info li:nth-child(1) { background: #FCD553; }
+.welcome-grid li:nth-child(6), #retrieve-info li:nth-child(2) { background: #5787A5; }
 .welcome-grid li:nth-child(7) { background: #A99A8D; }
 .welcome-grid li:nth-child(8) { background: #E83A49; }
+
+/* Login Grid Styling
+------------------------------------------------------------*/
+
+#login-grid {
+    margin-top: 0.5em;
+}
+
+#login-grid label, #retrieve-info li a {
+    color: #fff;
+    font-size: 150%;
+    text-align: center;
+}
+
+#retrieve-info li {
+    text-align: center;
+    padding-top: 3.7em;
+}
+
+#login-grid input {
+    border-radius: 5px;
+}
+
+#login-grid li {
+    padding: 3em;
+}
+
+#login-grid li:nth-child(1) {
+    width: 56%;
+}
+
+#login-grid li:nth-child(2) {
+    width: 42%;
+}
+
+input#remember_me {
+    margin-left: 3.7em;
+}
+
+input#_submit {
+    width: 100%;
+    background-color: #7CEBD4;
+    color: #fff;
+    font-family: "Poiret One";
+    font-size: 250%;
+    border: none;
+    margin-top: 0.6em;
+}
+
+/* Registration Styling
+---------------------------------------------------------*/
+
+
+
