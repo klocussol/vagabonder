@@ -32,4 +32,15 @@ class FeatureContext extends MinkContext
         $element->mouseOver();
     }
 
+     /**
+     * @Given /^I am logged in as "([^"]*)" with "([^"]*)"$/
+     */
+    public function iAmLoggedInAsWith($email, $password)
+    {
+        $this->iAmOnHomepage();
+        $this->clickLink('login');
+        $this->fillField("username", $email);
+        $this->fillField("password", $password);
+        $this->pressButton("_submit");
+    }
 }

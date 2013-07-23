@@ -5,7 +5,7 @@ Feature: Sign up for a Vagabonder account
 
 	Scenario: I can navigate to sign up
 		Given I am on homepage
-		And I follow "Sign Up"
+		And I follow "Register"
 		Then I should be on "/register/"
 
 	Scenario: I can sign up for a Vagabonder account
