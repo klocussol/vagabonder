@@ -8,11 +8,14 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        if($this->get('security.context')->isGranted('ROLE_USER')) { 
+            return $this->forward('VagabonderWebBundle:Default:myProfile');
+        }
         return $this->render('VagabonderWebBundle:Default:index.html.twig');
     }
 
-    public function profileAction()
+    public function myProfileAction()
     {
-        return $this->render('VagabonderWebBundle:Default:profile.html.twig');
+        return $this->render('VagabonderWebBundle:Default:my-profile.html.twig');
     }
 }
