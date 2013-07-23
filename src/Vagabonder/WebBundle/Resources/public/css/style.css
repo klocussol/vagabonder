@@ -7,7 +7,7 @@ p, a, label {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Seaweed Script", script;
+    font-family: "Dynalight", "Seaweed Script", script;
 }
 
 ul {
@@ -20,14 +20,14 @@ ul {
 ---------------------------------------------------------*/
 
 header nav ul li h1 a {
-    font-family: "Seaweed Script";
-    font-size: 150%;
+    font-family: "Dynalight";
+    font-size: 160%;
 }
 
 .welcome-grid li:nth-child(1) h3,
 .welcome-grid li:nth-child(2) h3,
 .welcome-grid li:nth-child(3) h3 {
-    font-family: "Seaweed Script";
+    font-family: "Dynalight";
 }
 
 .top-bar, .top-bar-section ul li.has-dropdown a,
@@ -167,11 +167,11 @@ a.button img {
 }
 
 .welcome-grid li:nth-child(1), #login-grid li:nth-child(1) { background: #F7A77C; }
-.welcome-grid li:nth-child(2), #login-grid li:nth-child(2) { background: #0B486B; }
+.welcome-grid li:nth-child(2), #login-grid li:nth-child(2) { background: #E8D9C2; }
 .welcome-grid li:nth-child(3), #login-grid li:nth-child(3) { background: #F05350; }
-.welcome-grid li:nth-child(4), #login-grid li:nth-child(4) { background: #7CEBD4; }
+.welcome-grid li:nth-child(4), #login-grid li:nth-child(4) { background: #FAD5A6; }
 .welcome-grid li:nth-child(5), #retrieve-info li:nth-child(1) { background: #FCD553; }
-.welcome-grid li:nth-child(6), #retrieve-info li:nth-child(2) { background: #5787A5; }
+.welcome-grid li:nth-child(6), #retrieve-info li:nth-child(2) { background: #FFAB90; }
 .welcome-grid li:nth-child(7) { background: #A99A8D; }
 .welcome-grid li:nth-child(8) { background: #E83A49; }
 
@@ -214,13 +214,14 @@ input#remember_me {
 }
 
 input#_submit {
-    width: 100%;
-    background-color: #7CEBD4;
+    background-color: #FAD5A6;
+    border: solid 2px #fff;
     color: #fff;
     font-family: "Poiret One";
     font-size: 250%;
-    border: none;
-    margin-top: 0.6em;
+    margin-left: -0.3em;
+    margin-top: 0.25em;
+    padding: 0.5em;
 }
 
 /* Registration Styling
