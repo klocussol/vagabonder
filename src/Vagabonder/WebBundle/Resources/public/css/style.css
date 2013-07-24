@@ -2,6 +2,10 @@
 /* General
 ---------------------------------------------------------*/
 
+body {
+    background-color: #4F4F4F;
+}
+
 p, a, label {
     font-family: "Poiret One", sans-serif; 
 }
@@ -173,7 +177,7 @@ a.button img {
 .welcome-grid li:nth-child(5), #retrieve-info li:nth-child(1) { background: #FCD553; }
 .welcome-grid li:nth-child(6), #retrieve-info li:nth-child(2) { background: #FFAB90; }
 .welcome-grid li:nth-child(7) { background: #A99A8D; }
-.welcome-grid li:nth-child(8) { background: #E83A49; }
+.welcome-grid li:nth-child(8) { background: #D6CFC2; }
 
 /* Login Grid Styling
 ------------------------------------------------------------*/
