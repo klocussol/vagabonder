@@ -2,6 +2,10 @@
 /* General
 ---------------------------------------------------------*/
 
+body {
+    background-color: #FFFAFA;
+}
+
 p, a, label {
     font-family: "Poiret One", sans-serif; 
 }
@@ -13,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 ul {
     list-style: none;
 }
-
 
 
 /* Top Nav Styling
@@ -34,6 +37,8 @@ header nav ul li h1 a {
 .top-bar-section ul#login-top-bar li a,
 .top-bar-section ul#login-top-bar li,
 li#register a, li#login a,
+li#user-greeting a,
+li#logout a,
 .top-bar-section ul li.has-form {
 	background-color: #87E8D9;
 }
@@ -49,9 +54,14 @@ li#login:hover > a, li#register:hover a,
 	border: solid #fff 1px;
 }
 
-a.button img {
-	width: 75%;
+#search-button {
+    background-color: #74C7BA;
+    border-radius: 0 5px 5px 0;
+}
+
+#search-button img {
 	height: 75%;
+    padding-bottom: 0.26em
 }
 
 .top-bar form input, .top-bar form .button {
@@ -215,7 +225,6 @@ input#remember_me {
 
 input#_submit {
     background-color: #FAD5A6;
-    border: solid 2px #fff;
     color: #fff;
     font-family: "Poiret One";
     font-size: 250%;
@@ -224,8 +233,15 @@ input#_submit {
     padding: 0.5em;
 }
 
-/* Registration Styling
+/* Profile Styling
 ---------------------------------------------------------*/
 
+#current-location {
+    padding-top: 1em;
+}
+
+#current-location p:first-child {
+    padding-right: 0.5em;
+}
 
 
