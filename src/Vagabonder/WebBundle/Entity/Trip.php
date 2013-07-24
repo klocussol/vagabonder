@@ -19,36 +19,37 @@ class Trip
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
      */
-    private $name;
+    protected $name;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="start_date", type="datetime")
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="end_date", type="datetime")
      */
-    private $endDate;
+    protected $endDate;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=1000)
+     * @ORM\Column(name="description", type="text")
      */
-    private $description;
+    protected $description;
 
+    protected $createdByUser;
 
     /**
      * Get id
@@ -150,5 +151,16 @@ class Trip
     public function getDescription()
     {
         return $this->description;
+    }
+
+    public function setCreatedByUser($user) {
+        $this->createdByUser = $user;
+
+        return $this;
+    }
+
+    public function getCreatedByUser() 
+    {
+        return $this->createdByUser;
     }
 }

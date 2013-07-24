@@ -3,6 +3,7 @@
 namespace Vagabonder\WebBundle\Entity;
 
 use Vagabonder\WebBundle\Entity\Trip;
+use Mockery;
 
 class TripTest extends \PHPUnit_Framework_TestCase
 {
@@ -12,10 +13,12 @@ class TripTest extends \PHPUnit_Framework_TestCase
     const VALID_END_DATE_STRING = "2013-10-01";
 
     private $validStartDate;
+    private $validEndDate;
 
     public function setup() {
         $this->vaildStartDate = new \DateTime(self::VALID_START_DATE_STRING);
         $this->validEndDate = new \DateTime(self::VALID_END_DATE_STRING);
+        $this->validUser = \Mockery::mock('Vagabonder\WebBundle\Entity\User');
     }
 
     /**
@@ -37,8 +40,20 @@ class TripTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(self::VALID_DESCRIPTION, $this->createValidTrip()->setDescription(self::VALID_DESCRIPTION)->getDescription());
     }
 
+    /**
+     * @test
+     */
+    public function validCreatedByUserAccessors()
+    {
+        $this->assertEquals($this->validUser, $this->createValidTrip()->setCreatedByUser($this->validUser)->getCreatedByUser());
+    }
+
     private function createValidTrip()
     {
         return $trip = new Trip();
+    }
+
+    public function tearDown() {
+        \Mockery::close();
     }
 }
