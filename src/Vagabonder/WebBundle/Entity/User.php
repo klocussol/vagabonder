@@ -23,6 +23,9 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Trip", mappedBy="user")
+     */
     protected $trips;
 
     public function __construct()

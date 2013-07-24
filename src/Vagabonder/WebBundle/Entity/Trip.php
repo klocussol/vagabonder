@@ -49,6 +49,10 @@ class Trip
      */
     protected $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="trips")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
     protected $createdByUser;
 
     /**
@@ -152,6 +156,7 @@ class Trip
     {
         return $this->description;
     }
+
 
     public function setCreatedByUser($user) {
         $this->createdByUser = $user;
