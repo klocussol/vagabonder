@@ -228,8 +228,29 @@ input#_submit {
     padding: 0.5em;
 }
 
-/* Registration Styling
+/* New Trip Styling
 ---------------------------------------------------------*/
 
+#new-trip-form {
+    background-color: #F4B2A1;
+    margin-top: 1.2em;
+    border-radius: 8px;
+}
 
+#new-trip-form h1, #new-trip-form h2 {
+    color: #fff;
+    text-align: center;
+}
 
+#new-trip-form input {
+    border-radius: 5px;
+}
+
+#new-trip-form form {
+    padding: 0 2em 2em 2em;
+}
+
+#new-trip-form form label {
+    color: #fff;
+    font-size: 1.3em;
+}
