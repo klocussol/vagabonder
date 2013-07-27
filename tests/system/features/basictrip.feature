@@ -28,3 +28,13 @@ Feature: I can create a trip itinerary
         Given I am logged in as "kyoko.locussol@ymail.com" with "kyoko"
         When I go to "/trip/new"
         Then I should see "Add a new trip"
+
+    Scenario: I can see the form to add new trip
+        Given I am logged in as "kyoko.locussol@ymail.com" with "kyoko"
+        And I go to "/trip/new"
+        Then I should see "Add a new trip"
+        And I should see "Trip Name"
+        And I should see "Destination"
+        And I should see "From"
+        And I should see "To"
+        And I should see "Spill the beans! Give some dets:"
