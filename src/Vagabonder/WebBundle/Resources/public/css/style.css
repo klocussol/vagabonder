@@ -244,5 +244,59 @@ input#_submit {
     padding-right: 0.5em;
 }
 
+#user-icons {
+    text-align: center;
+}
 
+#nationality, #languages {
+    text-align: center;
+}
 
+#profile-nav {
+    background-color: #F4B2A1;
+    height: 4.5em;
+    border-radius: 8px;
+    padding-top: 2%;
+}
+
+#profile-nav li {
+    width: 20%;
+    text-align: center;
+    border-right: solid 1px #fff;
+}
+
+#profile-nav li:last-child {
+    border: none;
+}
+
+#profile-nav li a {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+#profile-nav li a img {
+    width: 25%;
+}
+
+#profile-nav li:hover a img {
+    width: 28%;
+}
+
+#profile-nav li:hover a {
+    font-size: 1.4em;
+}
+
+#user-info {
+    background-color: #C6A6AA;
+    border: solid 1px #AFA2A3;
+    color: #fff;
+}
+
+#user-info hr {
+    border: solid #fff;
+    border-width: 1px 0 0;
+}
+
+.panel p {
+    color: #fff;
+}
