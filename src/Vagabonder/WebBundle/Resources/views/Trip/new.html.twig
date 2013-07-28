@@ -2,21 +2,32 @@
 
 {% block content %}
 
-<div class="row" id="new-trip-form">
+<div class="row" id="new-trip-wrapper">
     <div class="large-12 columns">
         <h1>Going Somewhere?</h1>
         <h2>Add a new trip</h2>
-        <form name="new-trip-form">
-            <label for="trip-name">Trip name: </label>
-            <input class="left" type="text" name="trip-name" id="trip-name" />
-            <label for="trip-destination">Destination: </label>
-            <input class="left" type="text" name="trip-destination" id="trip-destination" />
-            <label for="trip-start-date">From: </label>
-            <input class="left" type="date" name="trip-start-date" id="trip-start-date" />
-            <label for="trip-start-date">To: </label>
-            <input class="left" type="date" name="trip-end-date" id="trip-end-date" />
-            <label for="trip-description">Spill the beans! Give some dets: </label>
-            <input class="left" type="text" name="trip-description" id="trip-description" />
+        <form name="new-trip-form" id="new-trip-form">
+            <div class="trip-name">
+                <label for="trip-name" class="left">Trip name: </label>
+                <input class="left" type="text" name="trip-name" id="trip-name" />
+            </div>
+            <div class="trip-destination">
+                <label for="trip-destination" class="left">Destination: </label>
+                <input class="left" type="text" name="trip-destination" id="trip-destination" />
+            </div>
+            <div class="trip-start-date">
+                <label for="trip-start-date" class="left">From: </label>
+                <input class="left" type="date" name="trip-start-date" id="trip-start-date" />
+            </div>
+            <div class="trip-end-date">
+                <label for="trip-end-date" class="left">To: </label>
+                <input class="left" type="date" name="trip-end-date" id="trip-end-date" />
+            </div>
+            <div class="trip-description">
+                <label for="trip-description" class="left">Spill the beans: </label>
+                <textarea form="new-trip-form" class="left" type="text" name="trip-description" id="trip-description"></textarea>
+            </div>
+            <input type="submit" id="trip-submit" class="left" name="trip-submit" />
         </form>
     </div>
 </div>

@@ -1,3 +1,13 @@
+function labelAlign() {
+	var max = 0;
+    $("#new-trip-form div label").each(function(){
+        if ($(this).width() > max)
+            max = $(this).width();   
+    });
+    $("#new-trip-form div label").width(max);
+    $('#new-trip-form #trip-submit').css('margin-left', max + 40);
+}
+
 $(function() {
 	
 	$(".welcome-grid li:nth-child(4)").hover(function(){
@@ -53,4 +63,7 @@ $(function() {
 	}, function() {
 		$(".welcome-grid li:nth-child(8) p").addClass("hide");
 	});
+
+	labelAlign();
+
 });

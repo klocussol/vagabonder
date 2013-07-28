@@ -228,29 +228,58 @@ input#_submit {
     padding: 0.5em;
 }
 
-/* New Trip Styling
+/* New Trip Form Styling
 ---------------------------------------------------------*/
 
-#new-trip-form {
+#new-trip-wrapper {
     background-color: #F4B2A1;
-    margin-top: 1.2em;
     border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 1.2em;
+    text-align: right;
 }
 
-#new-trip-form h1, #new-trip-form h2 {
+#new-trip-wrapper  div.large-12 {
+    padding-bottom: 2em;
+}
+
+#new-trip-wrapper h1, #new-trip-wrapper h2 {
     color: #fff;
     text-align: center;
 }
 
-#new-trip-form input {
+#new-trip-wrapper input,
+#new-trip-wrapper textarea {
     border-radius: 5px;
+    width: 40%;
 }
 
-#new-trip-form form {
-    padding: 0 2em 2em 2em;
+#new-trip-wrapper #trip-start-date,
+#new-trip-wrapper #trip-end-date {
+    width: 16%;
 }
 
-#new-trip-form form label {
+#new-trip-wrapper #trip-submit {
+    width: 10%;
+}
+
+#new-trip-wrapper #trip-description {
+    height: 6em;
+}
+
+#new-trip-wrapper form {
+    padding: 0 2em 0em 0em;
+    position: relative;
+    left: 23%;
+}
+
+#new-trip-wrapper form label {
     color: #fff;
     font-size: 1.3em;
+    margin-right: 2em;
+}
+
+#new-trip-wrapper form div,
+#new-trip-wrapper #trip-submit {
+    clear: both;
 }

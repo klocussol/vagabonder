@@ -37,4 +37,4 @@ Feature: I can create a trip itinerary
         And I should see "Destination"
         And I should see "From"
         And I should see "To"
-        And I should see "Spill the beans! Give some dets:"
+        And I should see "Spill the beans"
