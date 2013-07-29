@@ -9,7 +9,3 @@ vagabonder_web_profile:
 vagabonder_web_trip_new:
     pattern: /trip/new
     defaults: { _controller: VagabonderWebBundle:Trip:new }
-
-vagabonder_web_trip_new_confirmation:
-    pattern: /trip/new/confirmation
-    defaults: { _controller: VagabonderWebBundle:Trip:confirmation }
