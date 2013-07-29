@@ -19,6 +19,7 @@ class TripTest extends \PHPUnit_Framework_TestCase
         $this->vaildStartDate = new \DateTime(self::VALID_START_DATE_STRING);
         $this->validEndDate = new \DateTime(self::VALID_END_DATE_STRING);
         $this->validUser = \Mockery::mock('Vagabonder\WebBundle\Entity\User');
+        $this->validDestination = \Mockery::mock('Vagabonder\WebBundle\Entity\Destination');
     }
 
     /**
@@ -46,6 +47,14 @@ class TripTest extends \PHPUnit_Framework_TestCase
     public function validCreatedByUserAccessors()
     {
         $this->assertEquals($this->validUser, $this->createValidTrip()->setCreatedByUser($this->validUser)->getCreatedByUser());
+    }
+
+    /**
+     * @test
+     */
+    public function validDestinationAccessors()
+    {
+        $this->assertEquals($this->validDestination, $this->createValidTrip()->setDestination($this->validDestination)->getDestination());
     }
 
     private function createValidTrip()

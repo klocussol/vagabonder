@@ -56,6 +56,12 @@ class Trip
     protected $createdByUser;
 
     /**
+     * @ORM\OneToOne(targetEntity="Destination")
+     * @ORM\JoinColumn(name="destination_id", referencedColumnName="id")
+     */
+    protected $destination;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -167,5 +173,17 @@ class Trip
     public function getCreatedByUser() 
     {
         return $this->createdByUser;
+    }
+
+    public function setDestination($destination)
+    {
+        $this->destination = $destination;
+
+        return $this;
+    }
+
+    public function getDestination()
+    {
+        return $this->destination;
     }
 }
