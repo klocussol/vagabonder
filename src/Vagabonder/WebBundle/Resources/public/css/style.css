@@ -248,19 +248,39 @@ input#_submit {
     text-align: center;
 }
 
+#new-trip-form input,
+#new-trip-form textarea {
+    color: #F4B2A1;
+}
+
+#new-trip-wrapper #new-trip-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
 #new-trip-wrapper input,
 #new-trip-wrapper textarea {
     border-radius: 5px;
-    width: 40%;
+    width: 60%;
 }
 
 #new-trip-wrapper #trip-start-date,
 #new-trip-wrapper #trip-end-date {
-    width: 16%;
+    width: 30%;
 }
 
 #new-trip-wrapper #trip-submit {
-    width: 10%;
+    background-color: #DD7B6A;
+    border: solid 1px #C18B74;
+    color: #fff;
+    font-family: "Poiret One";
+    width: 20%;
+}
+
+#new-trip-wrapper #trip-submit:hover {
+    background-color: #fff;
+    border: solid 1px #DD7B6A;
+    color: #DD7B6A;
 }
 
 #new-trip-wrapper #trip-description {
@@ -269,8 +289,6 @@ input#_submit {
 
 #new-trip-wrapper form {
     padding: 0 2em 0em 0em;
-    position: relative;
-    left: 23%;
 }
 
 #new-trip-wrapper form label {
@@ -283,3 +301,4 @@ input#_submit {
 #new-trip-wrapper #trip-submit {
     clear: both;
 }
+

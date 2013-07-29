@@ -11,4 +11,9 @@ class TripController extends Controller
         return $this->render('VagabonderWebBundle:Trip:new.html.twig');
     }
 
+    public function confirmationAction()
+    {
+        return $this->render('VagabonderWebBundle:Trip:confirmation.html.twig');
+    }
+
 }
