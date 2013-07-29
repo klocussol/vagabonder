@@ -6,24 +6,24 @@
     <div class="large-12 columns">
         <h1>Going Somewhere?</h1>
         <h2>Add a new trip</h2>
-        <form name="new-trip-form" id="new-trip-form" action="{{ path("vagabonder_web_trip_new_confirmation") }}" method="post">
-            <div class="trip-name">
+        <form name="new-trip-form" id="new-trip-form" action="{{ path("vagabonder_web_trip_new") }}" method="post">
+            <div>
                 <label for="trip-name" class="left">Trip name: </label>
                 <input class="left" type="text" name="trip-name" id="trip-name" />
             </div>
-            <div class="trip-destination">
+            <div>
                 <label for="trip-destination" class="left">Destination: </label>
                 <input class="left" type="text" name="trip-destination" id="trip-destination" />
             </div>
-            <div class="trip-start-date">
+            <div>
                 <label for="trip-start-date" class="left">From: </label>
                 <input class="left" type="date" name="trip-start-date" id="trip-start-date" />
             </div>
-            <div class="trip-end-date">
+            <div>
                 <label for="trip-end-date" class="left">To: </label>
                 <input class="left" type="date" name="trip-end-date" id="trip-end-date" />
             </div>
-            <div class="trip-description">
+            <div>
                 <label for="trip-description" class="left">Spill the beans: </label>
                 <textarea form="new-trip-form" class="left" type="text" name="trip-description" id="trip-description"></textarea>
             </div>

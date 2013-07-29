@@ -5,7 +5,7 @@
 <div id="profile">
 	<header class="row">
 		<div class="columns large-12">
-			<a href="#profile"><h3>Kyoko Locussol</h3></a>
+			<!-- <a href="#profile"><h3>Kyoko Locussol</h3></a>
 		</div>
 		<div class="large-12 columns">
 			<div id="current-location" class="left">
@@ -44,8 +44,8 @@
 				<p>Caramel malt bacterial final gravity wort cask conditioning, " amber autolysis, final gravity." barley mouthfeel caramel malt hydrometer carbonation additive carboy.</p> 
 				<p>Infusion berliner weisse autolysis hydrometer barley scotch ale! anaerobic malt real ale specific gravity hops! fermentation hop back, reinheitsgebot hops, bung abv imperial additive.</p>
 			</div> <!-- closes user-info -->
-		</div> <!-- closes user-profile -->
-		<div class="large-9 left">
+		<!-- </div> --> <!-- closes user-profile -->
+		<!-- <div class="large-9 left">
 			<nav>
 				<ul>
 					<li class="left"><a href="#">64<br />Bonds</a></li>
@@ -54,7 +54,80 @@
 					<li class="left"><a href="#">21<br />Comments</a></li>
 					<li class="left"><a href="#">54<br />Uploads</a></li>
 				</ul>
-			</nav>
+			</nav> -->
+			<div class="columns large-3">
+				<a href="#profile" class="left"><h3>Kyoko Locussol</h3></a>
+			</div>
+			<div class="columns large-9">
+				<div id="current-location" class="right">
+					<p class="left">Currently in: </p>
+					<p class="left">Kingston, Jamaica</p>
+				</div>
+			</div>
+		</div>
+	</header> 
+	<div class="row">
+		<div class="columns large-12">
+			<div id="user-profile" class="columns large-3">
+				<a href="#profile"><img src="{{ asset('bundles/vagabonderweb/images/profile.jpg') }}" alt="Profile Picture" /></a>
+				<div id="user-info" class="panel">
+					<div id="user-icons">
+						<img src="{{ asset('bundles/vagabonderweb/images/female.png') }}" alt="female" />
+						<img src="{{ asset('bundles/vagabonderweb/images/age-25.png') }}" alt="age" />
+						<img src="{{ asset('bundles/vagabonderweb/images/compass.png') }}" alt="compass" />
+					</div>
+					<hr />
+					<div id="nationality">
+						<p>Nationality:</p>
+						<img src="{{ asset('bundles/vagabonderweb/images/french.png') }}" alt="french" />
+						<img src="{{ asset('bundles/vagabonderweb/images/japan.png') }}" alt="japan" />
+						<img src="{{ asset('bundles/vagabonderweb/images/american.png') }}" alt="american" />
+					</div>
+					<hr />
+					<div id="languages">
+						<p>Languages:</p>
+						<img src="{{ asset('bundles/vagabonderweb/images/french.png') }}" />
+						<img src="{{ asset('bundles/vagabonderweb/images/american.png') }}" />
+					</div>
+					<hr />
+					<div id="user-bio">
+						<p>Caramel malt bacterial final gravity wort cask conditioning, " amber autolysis, final gravity." barley mouthfeel caramel malt hydrometer carbonation additive carboy.</p> 
+						<p>Infusion berliner weisse autolysis hydrometer barley scotch ale! anaerobic malt real ale specific gravity hops! fermentation hop back, reinheitsgebot hops, bung abv imperial additive.</p>
+					</div>
+				</div> <!-- closes user-info -->
+			</div> <!-- closes user-profile -->
+			<div class="large-9 left">
+				<nav>
+					<ul id="profile-nav">
+						<li class="left">
+							<a href="#">
+								<img src="{{ asset('bundles/vagabonderweb/images/bonds.png')}}" alt="bonds" />Bonds
+							</a>
+						</li>
+						<li class="left">
+							<a href="#">
+								<img src="{{ asset('bundles/vagabonderweb/images/signs.png')}}" alt="signs" />Trips
+							</a>
+						</li>
+						<li class="left">
+							<a href="#">
+								<img src="{{ asset('bundles/vagabonderweb/images/footprints.png')}}" alt="footprints" />Footprints
+							</a>
+						</li>
+						<li class="left">
+							<a href="#">
+								<img src="{{ asset('bundles/vagabonderweb/images/comments.png')}}" alt="comments" />Reviews
+							</a>
+						</li>
+						<li class="left">
+							<a href="#">
+								<img src="{{ asset('bundles/vagabonderweb/images/uploads.png')}}" alt="uploads" />
+								Uploads
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</div>
 </div> <!-- closes profile -->

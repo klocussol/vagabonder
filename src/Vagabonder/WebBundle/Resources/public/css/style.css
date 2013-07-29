@@ -3,7 +3,7 @@
 ---------------------------------------------------------*/
 
 body {
-    background-color: #fff;
+    background-color: #FFFAFA;
 }
 
 p, a, label {
@@ -17,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 ul {
     list-style: none;
 }
-
 
 
 /* Top Nav Styling
@@ -38,6 +37,8 @@ header nav ul li h1 a {
 .top-bar-section ul#login-top-bar li a,
 .top-bar-section ul#login-top-bar li,
 li#register a, li#login a,
+li#user-greeting a,
+li#logout a,
 .top-bar-section ul li.has-form {
 	background-color: #87E8D9;
 }
@@ -53,9 +54,14 @@ li#login:hover > a, li#register:hover a,
 	border: solid #fff 1px;
 }
 
-a.button img {
-	width: 75%;
+#search-button {
+    background-color: #74C7BA;
+    border-radius: 0 5px 5px 0;
+}
+
+#search-button img {
 	height: 75%;
+    padding-bottom: 0.26em
 }
 
 .top-bar form input, .top-bar form .button {
@@ -219,7 +225,6 @@ input#remember_me {
 
 input#_submit {
     background-color: #FAD5A6;
-    border: solid 2px #fff;
     color: #fff;
     font-family: "Poiret One";
     font-size: 250%;
@@ -302,3 +307,70 @@ input#_submit {
     clear: both;
 }
 
+/* Profile Styling
+---------------------------------------------------------*/
+
+#current-location {
+    padding-top: 1em;
+}
+
+#current-location p:first-child {
+    padding-right: 0.5em;
+}
+
+#user-icons {
+    text-align: center;
+}
+
+#nationality, #languages {
+    text-align: center;
+}
+
+#profile-nav {
+    background-color: #F4B2A1;
+    height: 4.5em;
+    border-radius: 8px;
+    padding-top: 2%;
+}
+
+#profile-nav li {
+    width: 20%;
+    text-align: center;
+    border-right: solid 1px #fff;
+}
+
+#profile-nav li:last-child {
+    border: none;
+}
+
+#profile-nav li a {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+#profile-nav li a img {
+    width: 25%;
+}
+
+#profile-nav li:hover a img {
+    width: 28%;
+}
+
+#profile-nav li:hover a {
+    font-size: 1.4em;
+}
+
+#user-info {
+    background-color: #F4B2A1;
+    border: solid 1px #F4B2A1;
+    color: #fff;
+}
+
+#user-info hr {
+    border: solid #fff;
+    border-width: 1px 0 0;
+}
+
+.panel p {
+    color: #fff;
+}
