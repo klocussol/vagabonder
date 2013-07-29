@@ -1,60 +1,62 @@
 {% extends 'VagabonderWebBundle::layout.html.twig' %}
+
 {% block content %}
+
 <div id="profile">
-		<header class="row">
-			<div class="columns large-12">
-				<a href="#profile"><h3>Kyoko Locussol</h3></a>
+	<header class="row">
+		<div class="columns large-12">
+			<a href="#profile"><h3>Kyoko Locussol</h3></a>
+		</div>
+		<div class="large-12 columns">
+			<div id="current-location" class="left">
+				<img src="img/pin.png" class="left" />
+				<p class="left">Kingston, Jamaica</p>
 			</div>
-			<div class="large-12 columns">
-				<div id="current-location" class="left">
-					<img src="img/pin.png" class="left" />
-					<p class="left">Kingston, Jamaica</p>
-				</div>
-				<div id="hometown" class="left">
-					<img src="img/home.png" class="left"/>
-					<p class="left">Washington, DC, USA</p>
-				</div>
-			</div>
-		</header> 
-		<div class="row">
-			<div id="user-profile" class="columns large-3">
-				<a href="#profile"><img src="img/profile2.jpg" /></a>
-				<div id="user-info" class="panel">
-					<div id="user-icons">
-						<img src="img/female.png" />
-						<img src="img/age-25.png" />
-						<img src="img/compass.png" />
-					</div>
-					<hr />
-					<div id="nationality">
-						<p class="left">Nationality:</p>
-						<img class="left" src="img/french.png" />
-						<img class="left" src="img/japan.png" />
-						<img class="left" src="img/american.png" />
-					</div>
-					<hr />
-					<div id="languages">
-						<p class="left">Languages:</p>
-						<img class="left" src="img/french.png" />
-						<img class="left" src="img/american.png" />
-					</div>
-					<hr />
-					<p>Caramel malt bacterial final gravity wort cask conditioning, " amber autolysis, final gravity." barley mouthfeel caramel malt hydrometer carbonation additive carboy.</p> 
-					<p>Infusion berliner weisse autolysis hydrometer barley scotch ale! anaerobic malt real ale specific gravity hops! fermentation hop back, reinheitsgebot hops, bung abv imperial additive.</p>
-				</div> <!-- closes user-info -->
-			</div> <!-- closes user-profile -->
-			<div class="large-9 left">
-				<nav>
-					<ul>
-						<li class="left"><a href="#">64<br />Bonds</a></li>
-						<li class="left"><a href="#">3<br />Upcoming Trips</a></li>
-						<li class="left"><a href="#">15<br />Footprints</a></li>
-						<li class="left"><a href="#">21<br />Comments</a></li>
-						<li class="left"><a href="#">54<br />Uploads</a></li>
-					</ul>
-				</nav>
+			<div id="hometown" class="left">
+				<img src="img/home.png" class="left"/>
+				<p class="left">Washington, DC, USA</p>
 			</div>
 		</div>
-	</div> <!-- closes profile -->
+	</header> 
+	<div class="row">
+		<div id="user-profile" class="columns large-3">
+			<a href="#profile"><img src="img/profile2.jpg" /></a>
+			<div id="user-info" class="panel">
+				<div id="user-icons">
+					<img src="img/female.png" />
+					<img src="img/age-25.png" />
+					<img src="img/compass.png" />
+				</div>
+				<hr />
+				<div id="nationality">
+					<p class="left">Nationality:</p>
+					<img class="left" src="img/french.png" />
+					<img class="left" src="img/japan.png" />
+					<img class="left" src="img/american.png" />
+				</div>
+				<hr />
+				<div id="languages">
+					<p class="left">Languages:</p>
+					<img class="left" src="img/french.png" />
+					<img class="left" src="img/american.png" />
+				</div>
+				<hr />
+				<p>Caramel malt bacterial final gravity wort cask conditioning, " amber autolysis, final gravity." barley mouthfeel caramel malt hydrometer carbonation additive carboy.</p> 
+				<p>Infusion berliner weisse autolysis hydrometer barley scotch ale! anaerobic malt real ale specific gravity hops! fermentation hop back, reinheitsgebot hops, bung abv imperial additive.</p>
+			</div> <!-- closes user-info -->
+		</div> <!-- closes user-profile -->
+		<div class="large-9 left">
+			<nav>
+				<ul>
+					<li class="left"><a href="#">64<br />Bonds</a></li>
+					<li class="left"><a href="#">3<br />Upcoming Trips</a></li>
+					<li class="left"><a href="#">15<br />Footprints</a></li>
+					<li class="left"><a href="#">21<br />Comments</a></li>
+					<li class="left"><a href="#">54<br />Uploads</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div> <!-- closes profile -->
 
 {% endblock content %}

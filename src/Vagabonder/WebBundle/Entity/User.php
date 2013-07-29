@@ -4,6 +4,7 @@ namespace Vagabonder\WebBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * User
@@ -22,6 +23,15 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Trip", mappedBy="user")
+     */
+    protected $trips;
+
+    public function __construct()
+    {
+        $this->trips = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -31,5 +41,17 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getTrips()
+    {
+        return $this->trips;
+    }
+
+    public function addTrip($trip)
+    {
+        $this->trips->add($trip);
+
+        return $this;
     }
 }
