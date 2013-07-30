@@ -4,6 +4,7 @@
 
 body {
     background-color: #FFFAFA;
+    color: #fff;
     font-family: "Poiret One", sans-serif;
     font-size: 100%;
 }
@@ -13,6 +14,7 @@ body {
 }
 */
 h1, h2, h3, h4, h5, h6 {
+    color: #fff;
     font-family: "Dynalight", "Seaweed Script", script;
 }
 
@@ -88,19 +90,6 @@ li#login:hover > a, li#register:hover a,
     margin-top: 0.1em;
 }
 
-#footer-nav ul li h4, 
-#footer-nav ul li ul li a {
-    color: #fff;
-}
-
-#footer-nav ul li ul li a {
-    opacity: 0.7;
-}
-
-#footer-nav ul li ul li:hover a {
-    opacity: 1;
-}
-
 #footer-nav > ul > li {
     width: 24%;
     height: 13em;
@@ -113,14 +102,23 @@ li#login:hover > a, li#register:hover a,
     position: relative;
 }
 
+#footer-nav ul li ul li a {
+    color: #fff;
+    opacity: 0.7;
+}
+
+#footer-nav ul li ul li:hover a {
+    opacity: 1;
+}
+
+
 /* Alert Stylings
 ------------------------------------------------------------*/
-
-
 
 div.alert-box.success, div.alert-box.alert {
     background-color: #74C7BA;
     border: solid 1px #5CAFA3;
+    color: #fff;
     font-size: 110%;
     margin-top: 1.2em;
 }
@@ -266,7 +264,6 @@ input#_submit {
 }
 
 #new-trip-wrapper h1, #new-trip-wrapper h2 {
-    color: #fff;
     text-align: center;
 }
 
@@ -329,6 +326,35 @@ input#_submit {
 #new-trip-wrapper form div,
 #new-trip-wrapper #trip-submit {
     clear: both;
+}
+
+/* Trip summary
+---------------------------------------------------------*/
+
+#trip-summary, #match-list-wrap {
+    margin-top: 1.2em;
+    background-color: #F4B2A1;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    padding-left: 1em;
+}
+
+#match-list-wrap h3 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#match-list div.row {
+    margin-top: 1.3em;
+}
+
+#match-list div.row div.large-3 {
+    text-align: center;
+}
+
+#match-list img {
+    width: 70%;
 }
 
 /* Profile Styling

@@ -37,6 +37,11 @@ class TripController extends Controller
     {
         $trip = $this->getDoctrine()->getRepository('VagabonderWebBundle:Trip')->find($id);
 
-        return $this->render('VagabonderWebBundle:Trip:view.html.twig', array('name' => $trip->getName()));
+        return $this->render('VagabonderWebBundle:Trip:view.html.twig', array(
+            'name' => $trip->getName(),
+            'description' => $trip->getDescription(),
+            'startDate' => $trip->getStartDate()->format('m-d-Y'),
+            'endDate' => $trip->getEndDate()->format('m-d-Y')
+        ));
     }
 }

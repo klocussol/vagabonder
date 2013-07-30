@@ -9,10 +9,14 @@ Feature: I can create a trip itinerary
         And I fill in "trip-name" with "Paris 2013"
         And I fill in "trip-start-date" with "2013-08-14"
         And I fill in "trip-end-date" with "2013-09-05"
-        And I fill in "trip-description" with "Visiting Paris"
+        And I fill in "trip-description" with "I am going to Paris to visit friends and family. Most of them will be working during the day so I'd love to hang out with locals or traveleres during when they are busy!"
         When I press "trip-submit"
         Then I should see "Your trip has been saved, see who you could meet up with below!"
         And I should see "Paris 2013"
+        And I should see "Leaving on 08-14-2013"
+        And I should see "Returning on 09-05-2013"
+        And I should see "I am going to Paris to visit friends and family. Most of them will be working during the day so I'd love to hang out with locals or traveleres during when they are busy!"
+        And I should see "These vagabonders have similar itineraries. Connect and coordinate with them to create some unforgettable bonds!"
 
     @javascript
     Scenario: I can navigate to the "New Trip" page
