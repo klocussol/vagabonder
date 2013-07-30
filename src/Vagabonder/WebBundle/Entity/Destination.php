@@ -31,9 +31,44 @@ class Destination
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=255)
+     * @ORM\Column(name="city_accent", type="string", length=255)
      */
-    protected $country;
+    protected $cityAccent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="country_code", type="string", length=2)
+     */
+    protected $countryCode;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="region", type="integer")
+     */
+    protected $region;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="city_population", type="integer")
+     */
+    protected $cityPopulation;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="city_longitude", type="float")
+     */
+    protected $cityLongitude;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="city_latitude", type="float")
+     */
+    protected $cityLatitude;
 
 
     /**
@@ -70,25 +105,140 @@ class Destination
     }
 
     /**
-     * Set country
+     * Set city accent
      *
-     * @param string $country
+     * @param string $cityAccent
      * @return Destination
      */
-    public function setCountry($country)
+    public function setCityAccent($cityAccent)
     {
-        $this->country = $country;
+        $this->cityAccent = $cityAccent;
 
         return $this;
     }
 
     /**
-     * Get country
+     * Get city
      *
      * @return string 
      */
-    public function getCountry()
+    public function getCityAccent()
     {
-        return $this->country;
+        return $this->cityAccent;
+    }
+
+    /**
+     * Set country code
+     *
+     * @param string $countryCode
+     * @return Destination
+     */
+    public function setCountryCode($countryCode)
+    {
+        $this->countryCode = $countryCode;
+
+        return $this;
+    }
+
+    /**
+     * Get country code
+     *
+     * @return string 
+     */
+    public function getCountryCode()
+    {
+        return $this->countryCode;
+    }
+
+    /**
+     * Set region
+     *
+     * @param int $region
+     * @return Destination
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    /**
+     * Get country code
+     *
+     * @return int
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * Set city population
+     * @param int $cityPopulation
+     *
+     * @return Destination
+     */
+    public function setCityPopulation($cityPopulation)
+    {
+        $this->cityPopulation = $cityPopulation;
+
+        return $this;
+    }
+
+    /**
+     * Get city population
+     *
+     * @return int
+     */
+    public function getCityPopulation()
+    {
+        return $this->cityPopulation;
+    }
+
+    /**
+     * Set city longitude
+     * @param float $cityLongitude
+     *
+     * @return Destination
+     */
+    public function setCityLongitude($cityLongitude)
+    {
+        $this->cityLongitude = $cityLongitude;
+
+        return $this;
+    }
+
+    /**
+     * Get city longitude
+     *
+     * @return int
+     */
+    public function getCityLongitude()
+    {
+        return $this->cityLongitude;
+    }
+
+    /**
+     * Set city latitude
+     * @param float $cityLatitude
+     *
+     * @return Destination
+     */
+    public function setCityLatitude($cityLatitude)
+    {
+        $this->cityLatitude = $cityLatitude;
+
+        return $this;
+    }
+
+    /**
+     * Get city latitude
+     *
+     * @return int
+     */
+    public function getCityLatitude()
+    {
+        return $this->cityLatitude;
     }
 }
