@@ -10,4 +10,9 @@ class TripController extends Controller
     {
         return $this->render('VagabonderWebBundle:Trip:new.html.twig');
     }
+
+    public function viewAction($id)
+    {
+        return $this->render('VagabonderWebBundle:Trip:view.html.twig', array('id' => $id));
+    }
 }
