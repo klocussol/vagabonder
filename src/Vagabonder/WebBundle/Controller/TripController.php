@@ -25,7 +25,7 @@ class TripController extends Controller
             $em->flush();
 
             $this->get('session')->getFlashBag()->add(
-                'notice',
+                'success',
                 'Your trip has been saved, see who you could meet up with below!'
             );
             return $this->redirect($this->generateUrl('vagabonder_web_trip_view', array('id' => $trip->getId())));

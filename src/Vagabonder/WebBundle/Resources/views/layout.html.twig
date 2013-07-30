@@ -14,8 +14,13 @@
 {% block messages %}
 	{% for type, messages in app.session.flashbag.all() %}
 	            {% for message in messages %}
-	                <div class="flash-{{ type }}">
-	                    {{ message }}
+                    <div class="row">
+                        <div class="large-12 columns content">
+	                       <div data-alert class="alert-box radius {{ type }}">
+	                           {{ message }}
+                               <a href class="close">x</a>
+                            </div>
+                        </div>
 	                </div>
 	            {% endfor %}
 	{% endfor %}

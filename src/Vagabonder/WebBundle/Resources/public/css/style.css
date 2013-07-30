@@ -4,12 +4,14 @@
 
 body {
     background-color: #FFFAFA;
+    font-family: "Poiret One", sans-serif;
+    font-size: 100%;
 }
 
-p, a, label {
+/*p, a, label {
     font-family: "Poiret One", sans-serif; 
 }
-
+*/
 h1, h2, h3, h4, h5, h6 {
     font-family: "Dynalight", "Seaweed Script", script;
 }
@@ -17,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 ul {
     list-style: none;
 }
-
 
 /* Top Nav Styling
 ---------------------------------------------------------*/
@@ -112,6 +113,22 @@ li#login:hover > a, li#register:hover a,
     position: relative;
 }
 
+/* Alert Stylings
+------------------------------------------------------------*/
+
+
+
+div.alert-box.success, div.alert-box.alert {
+    background-color: #74C7BA;
+    border: solid 1px #5CAFA3;
+    font-size: 110%;
+    margin-top: 1.2em;
+}
+
+div.alert-box.alert {
+    background-color: #F4B2A1;
+    border: solid 1px #DD907C;
+}
 
 /* Welcome and Login Grid Styling
 ------------------------------------------------------------*/
@@ -256,6 +273,13 @@ input#_submit {
 #new-trip-form input,
 #new-trip-form textarea {
     color: #F4B2A1;
+    font-weight: bolder;
+}
+
+#new-trip-form #trip-name,
+#new-trip-form #trip-description {
+    font-size: 105%;
+    letter-spacing: 0.09em;
 }
 
 #new-trip-wrapper #new-trip-form {
@@ -271,7 +295,7 @@ input#_submit {
 
 #new-trip-wrapper #trip-start-date,
 #new-trip-wrapper #trip-end-date {
-    width: 30%;
+    width: 35%;
 }
 
 #new-trip-wrapper #trip-submit {
