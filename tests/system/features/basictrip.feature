@@ -12,6 +12,7 @@ Feature: I can create a trip itinerary
         And I fill in "trip-description" with "Visiting Paris"
         When I press "trip-submit"
         Then I should see "Your trip has been saved, see who you could meet up with below!"
+        And I should see "Paris 2013"
 
     @javascript
     Scenario: I can navigate to the "New Trip" page
