@@ -360,7 +360,16 @@ input#_submit {
 /* Profile Styling
 ---------------------------------------------------------*/
 
+#user-name {
+    text-align: center;
+}
+
+#user-name h3 {
+    color: #000;
+}
+
 #current-location {
+    color: #000;
     padding-top: 1em;
 }
 
