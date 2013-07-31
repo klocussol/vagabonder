@@ -1,0 +1,435 @@
+
+/* General
+---------------------------------------------------------*/
+
+body {
+    background-color: #FFFAFA;
+    color: #fff;
+    font-family: "Poiret One", sans-serif;
+    font-size: 100%;
+}
+
+/*p, a, label {
+    font-family: "Poiret One", sans-serif; 
+}
+*/
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    font-family: "Dynalight", "Seaweed Script", script;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Top Nav Styling
+---------------------------------------------------------*/
+
+header nav ul li h1 a {
+    font-family: "Dynalight";
+    font-size: 160%;
+}
+
+.welcome-grid li:nth-child(1) h3,
+.welcome-grid li:nth-child(2) h3,
+.welcome-grid li:nth-child(3) h3 {
+    font-family: "Dynalight";
+}
+
+.top-bar, .top-bar-section ul li.has-dropdown a,
+.top-bar-section ul#login-top-bar li a,
+.top-bar-section ul#login-top-bar li,
+li#register a, li#login a,
+li#user-greeting a,
+li#logout a,
+.top-bar-section ul li.has-form {
+	background-color: #87E8D9;
+}
+
+.top-bar-section ul li.has-dropdown:hover > a,
+.top-bar-section ul li.has-dropdown ul.dropdown li:hover > a,
+li#login:hover > a, li#register:hover a,
+.top-bar-section ul li:hover > a {
+	background-color: #74C7BA;
+}
+
+.top-bar-section ul li.divider {
+	border: solid #fff 1px;
+}
+
+#search-button {
+    background-color: #74C7BA;
+    border-radius: 0 5px 5px 0;
+}
+
+#search-button img {
+	height: 75%;
+    padding-bottom: 0.26em
+}
+
+.top-bar form input, .top-bar form .button {
+	margin-top: -2px;
+}
+
+/* Footer Styling
+------------------------------------------------------------*/
+
+#footer-wrap {
+    background-color: #87E8D9;
+    height: 13em;
+}
+
+#main-footer {
+    margin: 0 auto;
+    width: 75%;
+}
+
+#footer-nav {
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 0.1em;
+}
+
+#footer-nav > ul > li {
+    width: 24%;
+    height: 13em;
+    margin: 0.5%;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1.6em;
+    cursor: pointer;
+    position: relative;
+}
+
+#footer-nav ul li ul li a {
+    color: #fff;
+    opacity: 0.7;
+}
+
+#footer-nav ul li ul li:hover a {
+    opacity: 1;
+}
+
+
+/* Alert Stylings
+------------------------------------------------------------*/
+
+div.alert-box.success, div.alert-box.alert {
+    background-color: #74C7BA;
+    border: solid 1px #5CAFA3;
+    color: #fff;
+    font-size: 110%;
+    margin-top: 1.2em;
+}
+
+div.alert-box.alert {
+    background-color: #F4B2A1;
+    border: solid 1px #DD907C;
+}
+
+/* Welcome and Login Grid Styling
+------------------------------------------------------------*/
+
+.welcome-grid {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0.5em;
+}
+
+.welcome-grid li, #login-grid li, #retrieve-info li, #fos_user_registration_form > div {
+    width: 24%;
+    height: 13em;
+    margin: 0.5%;
+    background: #8CC7DF;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1.6em;
+    cursor: pointer;
+    position: relative;
+    transition: width 0.1s;
+}
+
+.welcome-grid li.grid-span-2 {
+    width: 42%;
+}
+ 
+.welcome-grid li.grid-span-3 {
+	width: 56%;
+}
+
+.welcome-grid li.grid-span-4 {
+    width: 99%;
+}
+
+.welcome-grid li:nth-child(2) {
+	width: 15%;
+}
+
+.welcome-grid li:nth-child(3) {
+	width: 58%;
+}
+
+/* Welcome Grid Content Description Styling
+-------------------------------------------------------------*/
+
+.welcome-grid li p {
+    text-align: left;
+    margin-left: 1.8em;
+    margin-top: -1em;
+}
+
+.welcome-grid li h3 {
+    color: #fff;
+    font-family: "Poiret One";
+    font-size: 2.6em;
+    font-weight: 100;
+}
+
+.welcome-grid li:nth-child(1), .welcome-grid li:nth-child(2), .welcome-grid li:nth-child(3) {
+    padding-top: 4em;
+}
+
+.welcome-grid li:nth-child(1), #login-grid li:nth-child(1) { background: #F7A77C; }
+.welcome-grid li:nth-child(2), #login-grid li:nth-child(2) { background: #E8D9C2; }
+.welcome-grid li:nth-child(3), #login-grid li:nth-child(3) { background: #F05350; }
+.welcome-grid li:nth-child(4), #login-grid li:nth-child(4) { background: #FAD5A6; }
+.welcome-grid li:nth-child(5), #retrieve-info li:nth-child(1) { background: #FCD553; }
+.welcome-grid li:nth-child(6), #retrieve-info li:nth-child(2) { background: #FFAB90; }
+.welcome-grid li:nth-child(7) { background: #A99A8D; }
+.welcome-grid li:nth-child(8) { background: #D6CFC2; }
+
+/* Login Grid Styling
+------------------------------------------------------------*/
+
+#login-grid {
+    margin-top: 0.5em;
+}
+
+#login-grid label, #retrieve-info li a {
+    color: #fff;
+    font-size: 150%;
+    text-align: center;
+}
+
+#retrieve-info li {
+    text-align: center;
+    padding-top: 3.7em;
+}
+
+#login-grid input {
+    border-radius: 5px;
+}
+
+#login-grid li {
+    padding: 3em;
+}
+
+#login-grid li:nth-child(1) {
+    width: 56%;
+}
+
+#login-grid li:nth-child(2) {
+    width: 42%;
+}
+
+input#remember_me {
+    margin-left: 3.7em;
+}
+
+input#_submit {
+    background-color: #FAD5A6;
+    color: #fff;
+    font-family: "Poiret One";
+    font-size: 250%;
+    margin-left: -0.3em;
+    margin-top: 0.25em;
+    padding: 0.5em;
+}
+
+/* New Trip Form Styling
+---------------------------------------------------------*/
+
+#new-trip-wrapper {
+    background-color: #F4B2A1;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 1.2em;
+    text-align: right;
+}
+
+#new-trip-wrapper  div.large-12 {
+    padding-bottom: 2em;
+}
+
+#new-trip-wrapper h1, #new-trip-wrapper h2 {
+    text-align: center;
+}
+
+#new-trip-form input,
+#new-trip-form textarea {
+    color: #F4B2A1;
+    font-weight: bolder;
+}
+
+#new-trip-form #trip-name,
+#new-trip-form #trip-description {
+    font-size: 105%;
+    letter-spacing: 0.09em;
+}
+
+#new-trip-wrapper #new-trip-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#new-trip-wrapper input,
+#new-trip-wrapper textarea {
+    border-radius: 5px;
+    width: 60%;
+}
+
+#new-trip-wrapper #trip-start-date,
+#new-trip-wrapper #trip-end-date {
+    width: 35%;
+}
+
+#new-trip-wrapper #trip-submit {
+    background-color: #DD7B6A;
+    border: solid 1px #C18B74;
+    color: #fff;
+    font-family: "Poiret One";
+    width: 20%;
+}
+
+#new-trip-wrapper #trip-submit:hover {
+    background-color: #fff;
+    border: solid 1px #DD7B6A;
+    color: #DD7B6A;
+}
+
+#new-trip-wrapper #trip-description {
+    height: 6em;
+}
+
+#new-trip-wrapper form {
+    padding: 0 2em 0em 0em;
+}
+
+#new-trip-wrapper form label {
+    color: #fff;
+    font-size: 1.3em;
+    margin-right: 2em;
+}
+
+#new-trip-wrapper form div,
+#new-trip-wrapper #trip-submit {
+    clear: both;
+}
+
+/* Trip summary
+---------------------------------------------------------*/
+
+#trip-summary, #match-list-wrap {
+    margin-top: 1.2em;
+    background-color: #F4B2A1;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    padding-left: 1em;
+}
+
+#match-list-wrap h3 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#match-list div.row {
+    margin-top: 1.3em;
+}
+
+#match-list div.row div.large-3 {
+    text-align: center;
+}
+
+#match-list img {
+    width: 70%;
+}
+
+/* Profile Styling
+---------------------------------------------------------*/
+
+#user-name {
+    text-align: center;
+}
+
+#user-name h3 {
+    color: #000;
+}
+
+#current-location {
+    color: #000;
+    padding-top: 1em;
+}
+
+#current-location p:first-child {
+    padding-right: 0.5em;
+}
+
+#user-icons {
+    text-align: center;
+}
+
+#nationality, #languages {
+    text-align: center;
+}
+
+#profile-nav {
+    background-color: #F4B2A1;
+    height: 4.5em;
+    border-radius: 8px;
+    padding-top: 2%;
+}
+
+#profile-nav li {
+    width: 20%;
+    text-align: center;
+    border-right: solid 1px #fff;
+}
+
+#profile-nav li:last-child {
+    border: none;
+}
+
+#profile-nav li a {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+#profile-nav li a img {
+    width: 25%;
+}
+
+#profile-nav li:hover a img {
+    width: 28%;
+}
+
+#profile-nav li:hover a {
+    font-size: 1.4em;
+}
+
+#user-info {
+    background-color: #F4B2A1;
+    border: solid 1px #F4B2A1;
+    color: #fff;
+}
+
+#user-info hr {
+    border: solid #fff;
+    border-width: 1px 0 0;
+}
+
+.panel p {
+    color: #fff;
+}

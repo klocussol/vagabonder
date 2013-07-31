@@ -1,0 +1,14 @@
+parameters:
+#    vagabonder_web.example.class: Vagabonder\WebBundle\Example
+
+services:
+#    vagabonder_web.example:
+#        class: %vagabonder_web.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+services:
+    fos_user.registration.form.type:
+        class: Vagabonder\WebBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: vagabonder_user_registration }

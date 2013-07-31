@@ -1,0 +1,21 @@
+vagabonder_web_homepage:
+    pattern: /
+    defaults: { _controller: VagabonderWebBundle:Default:index }
+
+vagabonder_web_profile:
+    path: /my-profile
+    defaults: { _controller: VagabonderWebBundle:Default:myProfile }
+
+vagabonder_web_trip_new:
+    pattern: /trip/new
+    defaults: { _controller: VagabonderWebBundle:Trip:new }
+
+vagabonder_web_trip_view:
+    pattern: /trip/{id}
+    defaults: { _controller: VagabonderWebBundle:Trip:view }
+    requirements:
+        id: \d+
+
+vagabonder_web_destination_search:
+    pattern: /destination/search
+    defaults: { _controller: VagabonderWebBundle:Destination:search }

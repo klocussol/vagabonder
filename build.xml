@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Vagabonder" default="help" basedir=".">
+    <import file="build-deploy/php-quality.xml" />
+    <import file="build-deploy/testing.xml" />
+    <import file="build-deploy/composer.xml" />
+
+    <target name="help" description="Display detailed usage information">
+        <echo>Type "ant -p" to see a list of targets</echo>
+    </target>
+
+    <target name="build" depends="clean, prepare, lint, php-quality:ci, phpunit" />
+
+    <target name="build:full" depends="clean, prepare, lint, php-quality:ci, phpunit, behat, phpdoc" />
+
+    <target name="build:ci" depends="clean, prepare, lint, php-quality:ci, phpunit" />
+
+    <target name="bootstrap" description="Sets up this project">
+        <antcall target="clean:vendor" />
+        <antcall target="composer:dev" />
+    </target>
+
+    <target name="clean" description="Cleanup build artifacts">
+        <delete dir="${basedir}/build/coverage" />
+        <delete dir="${basedir}/build/logs" />
+        <delete dir="${basedir}/build/docs" />
+    </target>
+
+    <target name="clean:vendor" description="Cleanup vendor artifacts">
+        <delete dir="vendor" />
+        <delete dir="bin" />
+    </target>
+
+    <target name="prepare" description="Prepare for build">
+        <mkdir dir="${basedir}/build/coverage" />
+        <mkdir dir="${basedir}/build/logs" />
+        <mkdir dir="${basedir}/build/docs" />
+    </target>
+</project>

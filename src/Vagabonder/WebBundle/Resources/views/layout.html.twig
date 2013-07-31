@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+{% block topnav %}
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	{% include 'VagabonderWebBundle:Default:_securenav.html.twig' with {'email': app.user.email } %}
+{% else %}
+	{{ include('VagabonderWebBundle:Default:_publicnav.html.twig') }}
+{% endif %}
+
+{% endblock topnav %}
+
+{% block messages %}
+	{% for type, messages in app.session.flashbag.all() %}
+	            {% for message in messages %}
+                    <div class="row">
+                        <div class="large-12 columns">
+	                       <div data-alert class="alert-box radius {{ type }}">
+	                           {{ message }}
+                               <a href class="close">x</a>
+                            </div>
+                        </div>
+	                </div>
+	            {% endfor %}
+	{% endfor %}
+{% endblock messages %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+
+{{ include('VagabonderWebBundle:Default:_footer.html.twig') }}
+
+{% endblock %}
+
+{% endblock body %}
