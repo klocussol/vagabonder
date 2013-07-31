@@ -52,23 +52,23 @@ class Destination
     /**
      * @var integer
      *
-     * @ORM\Column(name="city_population", type="integer")
+     * @ORM\Column(name="population", type="integer")
      */
-    protected $cityPopulation;
+    protected $population;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="city_longitude", type="float")
+     * @ORM\Column(name="longitude", type="float")
      */
-    protected $cityLongitude;
+    protected $longitude;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="city_latitude", type="float")
+     * @ORM\Column(name="latitude", type="float")
      */
-    protected $cityLatitude;
+    protected $latitude;
 
 
     /**
@@ -179,9 +179,9 @@ class Destination
      *
      * @return Destination
      */
-    public function setCityPopulation($cityPopulation)
+    public function setPopulation($population)
     {
-        $this->cityPopulation = $cityPopulation;
+        $this->population = $population;
 
         return $this;
     }
@@ -191,9 +191,9 @@ class Destination
      *
      * @return int
      */
-    public function getCityPopulation()
+    public function getPopulation()
     {
-        return $this->cityPopulation;
+        return $this->population;
     }
 
     /**
@@ -202,9 +202,9 @@ class Destination
      *
      * @return Destination
      */
-    public function setCityLongitude($cityLongitude)
+    public function setLongitude($longitude)
     {
-        $this->cityLongitude = $cityLongitude;
+        $this->longitude = $longitude;
 
         return $this;
     }
@@ -214,20 +214,20 @@ class Destination
      *
      * @return int
      */
-    public function getCityLongitude()
+    public function getlongitude()
     {
-        return $this->cityLongitude;
+        return $this->longitude;
     }
 
     /**
      * Set city latitude
-     * @param float $cityLatitude
+     * @param float $latitude
      *
      * @return Destination
      */
-    public function setCityLatitude($cityLatitude)
+    public function setLatitude($latitude)
     {
-        $this->cityLatitude = $cityLatitude;
+        $this->latitude = $latitude;
 
         return $this;
     }
@@ -237,8 +237,8 @@ class Destination
      *
      * @return int
      */
-    public function getCityLatitude()
+    public function getLatitude()
     {
-        return $this->cityLatitude;
+        return $this->latitude;
     }
 }

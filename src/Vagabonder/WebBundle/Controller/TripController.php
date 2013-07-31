@@ -20,29 +20,21 @@ class TripController extends Controller
             $city = $destination[0];
             $countryCode = $destination[1];
 
+            $trip->setName($request->get('trip-name'))
+                 ->setStartDate(new \DateTime($request->get('trip-start-date')))
+                 ->setEndDate(new \DateTime($request->get('trip-end-date')))
+                 ->setDescription($request->get('trip-description'))
+                 ->setCreatedByUser($user);
+
             $em = $this->getDoctrine()->getManager();
-            $query = $em->createQuery(
-            "SELECT d FROM VagabonderWebBundle:Destination d WHERE d.city LIKE '$city%'");
+            $em->persist($trip);
+            $em->flush();
 
-            $destinationId = $query->getResult()->getId();
-
-            var_dump($destinationId);
-
-            // $trip->setName($request->get('trip-name'))
-            //      ->setStartDate(new \DateTime($request->get('trip-start-date')))
-            //      ->setEndDate(new \DateTime($request->get('trip-end-date')))
-            //      ->setDescription($request->get('trip-description'))
-            //      ->setCreatedByUser($user);
-
-            // $em = $this->getDoctrine()->getManager();
-            // $em->persist($trip);
-            // $em->flush();
-
-            // $this->get('session')->getFlashBag()->add(
-            //     'success',
-            //     'Your trip has been saved, see who you could meet up with below!'
-            // );
-            // return $this->redirect($this->generateUrl('vagabonder_web_trip_view', array('id' => $trip->getId())));
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                'Your trip has been saved, see who you could meet up with below!'
+            );
+            return $this->redirect($this->generateUrl('vagabonder_web_trip_view', array('id' => $trip->getId())));
         }
         return $this->render('VagabonderWebBundle:Trip:new.html.twig');
     }
