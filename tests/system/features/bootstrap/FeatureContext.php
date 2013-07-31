@@ -43,4 +43,29 @@ class FeatureContext extends MinkContext
         $this->fillField("_password", $password);
         $this->pressButton("_submit");
     }
+
+    /**
+     * @Given /^I wait "([^"]*)" seconds$/
+     */
+    public function iWaitSeconds($numberOfSeconds)
+    {
+        sleep($numberOfSeconds);
+    }
+
+    /**
+     * @Given /^I type "([^"]*)" in "([^"]*)"$/
+     */
+    public function iTypeIn($term, $field)
+    {
+        $this->getSession()->executeScript('$("[name='.$field.']").val("'.$term.'").trigger("input")');
+    }
+
+    /**
+     * @Given /^I click the first item in dropdown$/
+     */
+    public function iClickTheFirstItemInDropdown()
+    {
+        $this->getSession()->executeScript('$(".ui-autocomplete li:first-child a").click()');
+    }
+
 }

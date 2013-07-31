@@ -21,11 +21,20 @@ class DestinationController extends Controller
         $results = [];
 
         foreach ($destinations as $destination) {
-            $results[$destination->getId()] = $destination->getCity() . ', ' . $destination->getCountryCode();
+            $results[] = $this->getDisplayDestination($destination);
         }
         $response = new Response(json_encode($results));
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
+    }
+
+    public function getDisplayDestination($destination)
+    {
+        $result = new \stdClass;
+        $result->label = $destination->getCity() . ', ' . $destination->getCountryCode();
+        $result->id = $destination->getId();
+
+        return $result;
     }
 }

@@ -42,22 +42,11 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
   <script type="text/javascript">
-    jQuery(function($) {
-        var data = [
-            "Core",
-            "Selectors",
-            "Attributes",
-            "Traversing",
-            "Manipulation",
-            "CSS",
-            "Events",
-            "Effects",
-            "Ajax",
-            "Utilities"
-        ];
-        $("#trip-destination").autocomplete({
-            source: '/destination/search'
-        });
+    $("#trip-destination").autocomplete({
+        source: '/destination/search',
+        select: function(event, ui) {
+          $('#trip-destination-id').val(ui.item.id);
+        }
     });
   </script>
 </body>

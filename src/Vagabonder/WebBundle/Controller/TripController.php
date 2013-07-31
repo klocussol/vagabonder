@@ -15,12 +15,14 @@ class TripController extends Controller
             $user = $this->get('security.context')->getToken()->getUser();
             $trip = new Trip();
 
-            $tripDestination = $request->get('trip-destination');
-            $destination = explode(', ', $tripDestination);
-            $city = $destination[0];
-            $countryCode = $destination[1];
+            $tripDestinationId = $request->get('trip-destination-id');
+
+            $destination = $this->getDoctrine()
+                ->getRepository('VagabonderWebBundle:Destination')
+                ->findOneById($tripDestinationId);
 
             $trip->setName($request->get('trip-name'))
+                 ->setDestination($destination)
                  ->setStartDate(new \DateTime($request->get('trip-start-date')))
                  ->setEndDate(new \DateTime($request->get('trip-end-date')))
                  ->setDescription($request->get('trip-description'))
@@ -41,13 +43,20 @@ class TripController extends Controller
 
     public function viewAction($id)
     {
+        // how to match: repository query, getDestination and find other trips with those destinations and related users
+        // Create a trip repository class with references
+        
+
+
         $trip = $this->getDoctrine()->getRepository('VagabonderWebBundle:Trip')->find($id);
 
         return $this->render('VagabonderWebBundle:Trip:view.html.twig', array(
             'name' => $trip->getName(),
+            'destination' => $trip->getDestination()->getCity(),
             'description' => $trip->getDescription(),
             'startDate' => $trip->getStartDate()->format('m-d-Y'),
-            'endDate' => $trip->getEndDate()->format('m-d-Y')
+            'endDate' => $trip->getEndDate()->format('m-d-Y'),
+            'year' => $trip->getStartDate()->format('Y')
         ));
     }
 }
