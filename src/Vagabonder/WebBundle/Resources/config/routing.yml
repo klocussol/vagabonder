@@ -15,3 +15,7 @@ vagabonder_web_trip_view:
     defaults: { _controller: VagabonderWebBundle:Trip:view }
     requirements:
         id: \d+
+
+vagabonder_web_destination_search:
+    pattern: /destination/search
+    defaults: { _controller: VagabonderWebBundle:Destination:search }
