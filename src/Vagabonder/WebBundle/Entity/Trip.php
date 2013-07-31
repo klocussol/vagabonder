@@ -163,18 +163,34 @@ class Trip
         return $this->description;
     }
 
-
+    /**
+     * Set createdByUser
+     *
+     * @param User $user
+     * @return Trip
+     */
     public function setCreatedByUser($user) {
         $this->createdByUser = $user;
 
         return $this;
     }
 
+    /**
+     * Get createdByUser
+     *
+     * @return User
+     */
     public function getCreatedByUser() 
     {
         return $this->createdByUser;
     }
 
+    /**
+     * Set destination
+     *
+     * @param Destination $destination
+     * @return Trip
+     */
     public function setDestination($destination)
     {
         $this->destination = $destination;
@@ -182,6 +198,11 @@ class Trip
         return $this;
     }
 
+    /**
+     * Get destination
+     *
+     * @return Destination
+     */
     public function getDestination()
     {
         return $this->destination;

@@ -21,7 +21,7 @@ class DestinationController extends Controller
         $results = [];
 
         foreach ($destinations as $destination) {
-            $results[$destination->getId()] = $destination->getCity();
+            $results[$destination->getId()] = $destination->getCity() . ', ' . $destination->getCountryCode();
         }
         $response = new Response(json_encode($results));
         $response->headers->set('Content-Type', 'application/json');
