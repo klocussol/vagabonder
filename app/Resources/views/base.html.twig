@@ -11,13 +11,16 @@
   '@VagabonderWebBundle/Resources/public/vendor/css/foundation.min.css'
   '@VagabonderWebBundle/Resources/public/css/style.css'
   %}
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="{{ asset_url }}" />
-    <link href='http://fonts.googleapis.com/css?family=Text+Me+One|Allan|Dynalight|Seaweed+Script|Poiret+One|Raleway+Dots|Pompiere' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Text+Me+One|Allan|Dynalight|Seaweed+Script|Poiret+One|Raleway+Dots|Pompiere' rel='stylesheet' type='text/css' />
   {% endstylesheets %}
 
   {% javascripts
     '@VagabonderWebBundle/Resources/public/vendor/js/vendor/custom.modernizr.js'
   %}
+    <!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
     <script type="text/javascript" src="{{ asset_url }}"></script>
   {% endjavascripts %}
 </head>
@@ -35,6 +38,16 @@
 
   <script>
     $(document).foundation();
+  </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    $("#trip-destination").autocomplete({
+        source: '/destination/search',
+        select: function(event, ui) {
+          $('#trip-destination-id').val(ui.item.id);
+        }
+    });
   </script>
 </body>
 </html>

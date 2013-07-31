@@ -9,3 +9,13 @@ vagabonder_web_profile:
 vagabonder_web_trip_new:
     pattern: /trip/new
     defaults: { _controller: VagabonderWebBundle:Trip:new }
+
+vagabonder_web_trip_view:
+    pattern: /trip/{id}
+    defaults: { _controller: VagabonderWebBundle:Trip:view }
+    requirements:
+        id: \d+
+
+vagabonder_web_destination_search:
+    pattern: /destination/search
+    defaults: { _controller: VagabonderWebBundle:Destination:search }
